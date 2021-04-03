@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/", {data:[{articles:[{title:"提问的艺术：如何让别人喜欢回答你的提问",author:"千叶麻衣"}]}],fetch:{},mutations:void 0});
