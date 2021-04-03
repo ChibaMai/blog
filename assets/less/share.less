@@ -1,0 +1,145 @@
+// body style
+.mdui-drawer-body-left {
+  transition: padding-left @appba-transition;
+}
+
+.mdui-ripple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mdui-icon, .ivu-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  color: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  direction: ltr;
+}
+
+.mdui-icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.mdui-text-center {
+  text-align: center!important;
+}
+
+// appbar style
+.mdui-btn-icon {
+  width: @appbar-width;
+  min-width: @appbar-width;
+  height: @appbar-height;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+  overflow: hidden;
+  font-size: @appbar-font-size - 3px;
+  line-height: normal;
+  border-radius: 50%;
+}
+
+.mdui-btn {
+  display: inline-block;
+  line-height: @appbar-line-height;
+  text-align: center;
+}
+
+.mdui-typo-headline {
+  font-size: @appbar-font-size;
+  font-weight: 400;
+}
+
+.mdui-toolbar[class*=mdui-color-]:not(.mdui-color-transparent) .mdui-btn:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.mdui-toolbar[class*=mdui-color-]:not(.mdui-color-transparent) .mdui-btn:active {
+  background-color: rgba(255, 255, 255, .160);
+}
+
+// drawer style
+.mdui-img-fluid, .mdui-video-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// body style
+.mdui-container-fluid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+
+  .article-method {
+    flex: 1;
+    font-family: Roboto-Regular;
+  }
+
+  .floatingMenu {
+    width: 33%;
+    background-color: red;
+    opacity: 0.1;
+  }
+}
+
+.mdui-card {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #000;
+  background-color: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.mdui-card {
+  padding: 0 16px 16px;
+  margin: 0 10px;
+}
+
+.mdui-hoverable {
+  -webkit-transition: -webkit-box-shadow .25s cubic-bezier(.4,0,.2,1);
+  transition: -webkit-box-shadow .25s cubic-bezier(.4,0,.2,1);
+  transition: box-shadow .25s cubic-bezier(.4,0,.2,1);
+  transition: box-shadow .25s cubic-bezier(.4,0,.2,1),-webkit-box-shadow .25s cubic-bezier(.4,0,.2,1);
+  will-change: box-shadow;
+}
+
+.mdui-hoverable:focus, .mdui-hoverable:hover {
+  -webkit-box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+.vcomments {
+  padding-top: 20px;
+  margin-top: 25px;
+
+  .vpower {
+    display: none;
+  }
+
+  .v[data-class=v] .vwrap .vemojis i {
+    margin: 0 5px;
+    padding-top: 0;
+  }
+}

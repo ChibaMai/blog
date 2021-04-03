@@ -1,0 +1,56 @@
+@media (min-width: 600px) {
+  // body style
+  .mdui-appbar-with-toolbar {
+    padding-top: 64px;
+  }
+
+  // appbar style
+  .mdui-toolbar {
+    height: 64px;
+    line-height: 64px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 959px) {
+  // body style
+  .mdui-appbar-with-toolbar {
+    padding-top: @appbar-width;
+  }
+
+  // appbar style
+  .mdui-toolbar {
+    height: 48px;
+    line-height: 48px;
+
+    .mdui-btn-icon  {
+      width: @appbar-width - 8;
+      min-width: @appbar-width - 8;
+      height: @appbar-height - 8;
+      line-height: @appbar-height - 8;
+    }
+  }
+}
+
+@media (min-width: 1020px) {
+  // body style
+  .mdui-drawer-body-left {
+    padding-left: 240px;
+  }
+
+  // drawer
+  .mdui-drawer {
+    // top: 64px !important;
+    transform: translate(0, 64px);
+  }
+
+}
+
+@media (max-width: 1020px) {
+  // drawer
+  .mdui-drawer {
+    transform: translate(-330px, 48px);
+  }
+
+}
+
+
