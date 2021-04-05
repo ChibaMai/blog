@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/ContactMe", {data:[{article:{slug:"ContactMe",title:"联系我",toc:[],body:{type:"root",children:[]},dir:"\u002Fwidget",path:"\u002Fwidget\u002FContactMe",extension:".md",createdAt:"2021-04-05T09:03:43.439Z",updatedAt:"2021-04-05T09:03:43.440Z"}}],fetch:{},mutations:void 0});
