@@ -19,7 +19,7 @@ export default {
 <style lang="less" scoped>
 .mdui-fab {
   border-radius: 50%;
-  background-color: #ff4081 !important;
+  background-color: var(--bg-top);
   width: 56px;
   height: 56px;
   line-height: 52px;

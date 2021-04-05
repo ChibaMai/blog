@@ -7,4 +7,4 @@ title: 申请友链
 > 例如：  
 > 站点名称：千叶麻衣 Blog 
 > 介绍：分享互联网的宝藏  
-> 地址：blog.aftersoil.xyz
+> 地址：**blog.chibamai.xyz**

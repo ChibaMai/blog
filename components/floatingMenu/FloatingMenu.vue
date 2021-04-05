@@ -1,5 +1,5 @@
 <template>
-  <div class="floatingMenu">
+  <div class="floatingMenu mdui-hidden-sm-down">
     <Tab />
     <Archive />
     <Tags />

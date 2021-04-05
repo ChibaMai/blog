@@ -83,5 +83,15 @@ export default {
     background-color: transparent;
   }
 
+  .ivu-menu-submenu {
+    background-color: var(--bg-content);
+    transition: all @appba-transition;
+    color: var(--color-primary);
+
+    a {
+      color: var(--color-primary);
+    }
+  }
+
 }
 </style>

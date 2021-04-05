@@ -7,7 +7,7 @@ export default {
     title: '千叶 Blog - 分享互联网的宝藏',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
       { name: 'keywords', content: '千叶麻衣,千叶,麻衣,语心,技术博客,免费软件分享,aftersoil,aftersoil-blog,wiki,' },
       { hid: 'description', name: 'description', content: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！' },
     ],
@@ -16,22 +16,26 @@ export default {
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/normalize.min.css@8.0.1/normalize.min.css' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace-theme-default.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css' },
     ],
     script: [
       { src: 'https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js' },
-      { src: 'https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js' },
+      // { src: 'https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js' },
       { src: 'https://cdn.jsdelivr.net/npm/aftersoil_rippler@1.3.0/rippler.js' },
       // fontawesome
       // { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/brands.min.js' },
       // { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/solid.min.js' },
       // { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/fontawesome.min.js' },
       // fancybox
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js' },
+      { src: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js' },
       // { src: 'https://cdn.jsdelivr.net/npm/jquery-lazyload@1.9.7/jquery.lazyload.min.js' },
       { src: 'https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js' },
       { src: 'https://www.jq22.com/demo/jsloading-141022114841/js/echo.min.js' },
     ]
+  },
+
+  loading: {
+    color: "#ff4081",
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -47,6 +51,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/color-mode'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -108,6 +113,6 @@ export default {
   server: {
     port: 8000,
     // host: '0.0.0.0'
-    // host: ['192.168.1.9', '127.0.0.1']
+    host: '192.168.1.2'
   }
 }

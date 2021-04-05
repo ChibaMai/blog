@@ -38,7 +38,6 @@ export default {
     word-wrap: break-word;
     white-space: normal;
     word-break: break-all;
-    color: #727272;
   }
 
   .mdui-text-color-cyan {

@@ -2,8 +2,14 @@
   <div id="body" class="mdui-container-fluid">
 
     <div class="article-method">
-      <h1>{{ article.title }}</h1>
-      <nuxt-content :document="article" />
+      <div class="mdui-card mdui-hoverable">
+        <h1>{{ article.title }}</h1>
+        <nuxt-content :document="article" />
+      </div>
+
+      <div class="mdui-card mdui-hoverable vcomments">
+        <Valine />
+      </div>
     </div>
 
     <FloatingMenu />
@@ -11,7 +17,9 @@
 </template>
 
 <script>
+import Valine from '~/components/base/Valine/Valine.vue';
 export default {
+  components: { Valine },
   name: 'Portfolio',
 
   async asyncData ({ $content, params }) {

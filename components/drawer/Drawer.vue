@@ -36,7 +36,9 @@ export default {
   overflow-y: auto;
   white-space: nowrap;
   will-change: transform;
+  color: var(--font-color);
   transition: all @drawer-transition;
+  background-color: var(--bg-content);
 }
 
 .mdui-divider {

@@ -36,7 +36,7 @@ archive:
 
 | 标题 | 链接 |
 |:---:|:---:|
-| GitHub Aftersoil | [https://github.com/orgs/Aftersoil/dashboard](https://github.com/orgs/Aftersoil/dashboard) |
+| GitHub Aftersoil | https://github.com/orgs/Aftersoil/dashboard |
 
 ## 赞助我
 
