@@ -10,8 +10,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
       { name: 'keywords', content: '千叶麻衣,千叶,麻衣,语心,技术博客,免费软件分享,aftersoil,aftersoil-blog,wiki,' },
       { hid: 'description', name: 'description', content: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！' },
-      { name: 'google-site-verification', content: 'google-site-verification=aAQV8IgxP5WQiAuShum5fEQxY5S98Q8JSZoJe3kmwyY' },
-      { name: 'baidu-site-verification', content: 'code-SVyZBBxyAv' },
+      { name: 'google-site-verification', content: 'aAQV8IgxP5WQiAuShum5fEQxY5S98Q8JSZoJe3kmwyY' },
+      { name: 'baidu-site-verification', content: 'SVyZBBxyAv' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
