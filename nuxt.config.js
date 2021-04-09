@@ -46,6 +46,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~plugins/iview', ssr: true },
+    { src: '~/plugins/vue-lazyload', ssr: true },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -89,6 +90,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true,
+    vendor: ['vue-lazyload']
   },
 
   styleResources:{

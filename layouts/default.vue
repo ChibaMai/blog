@@ -5,18 +5,25 @@
     <Nuxt />
     <Foot />
     <Top />
+    <MaskLayer />
   </div>
 </template>
 
 <script>
 import Toolbar from '~/components/appbar/Toolbar/Toolbar';
 import Foot from '~/components/base/Foot/Foot';
+import MaskLayer from '~/components/base/MaskLayer/MaskLayer';
 import Top from '~/components/base/Top/Top';
 import Drawer from '~/components/drawer/Drawer';
 
 export default {
+  data() {
+    return {
+    }
+  },
 
   mounted() {
+
     new Ripple({
       // 水波纹透明度
       opacity: 0.6,
@@ -33,9 +40,13 @@ export default {
         autoStart : true,
       }
     });
+
   },
 
-  components: { Toolbar, Drawer, Top, Foot }
+  methods: {
+  },
+
+  components: { Toolbar, Drawer, Top, Foot, MaskLayer, }
 }
 </script>
 

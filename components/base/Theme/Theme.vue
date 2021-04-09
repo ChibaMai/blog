@@ -47,11 +47,12 @@ export default {
     position: absolute;
     z-index: 29;
     bottom: -75px;
-    right: 60px;
+    right: 40px;
     background-color: var(--bg-content);
     color: var(--font-color);
     border-radius: 3px;
     box-shadow: rgb(136 153 166 / 52%) 0 0px 15px 0px, rgb(136 153 166 / 42%) 0px 0px 3px 1px;
+    user-select: none;
   }
 
   span {

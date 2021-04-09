@@ -1,8 +1,8 @@
 exports = module.exports = {
   classification: [
+    { "title": "标签云", "href": "/widget/ArticleMethod" },
   ],
   page: [
-    { "title": "标签云", "href": "/widget/ArticleMethod" },
     // { "title": "文章使用方法", "href": "/widget/ArticleMethod" },
     // { "title": "联系我", "href": "/widget/ContactMe" },
     { "title": "About me", "href": "/widget/AboutMe" },
@@ -13,7 +13,7 @@ exports = module.exports = {
   links: [
     { "title": "Aftersoil-wiki", "href": "https://wiki.aftersoil.xyz/" },
     { "title": "KivenBlog", "href": "https://kivenblog.fit/" },
-    { "title": "如优图床", "href": "https://img.rruu.net/" },
+    // { "title": "如优图床", "href": "https://img.rruu.net/" },
     { "title": "Fast", "href": "https://fast.com/" },
   ]
 }

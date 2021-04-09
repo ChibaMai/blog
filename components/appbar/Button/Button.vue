@@ -1,12 +1,81 @@
 <template>
-  <a class="mdui-btn mdui-btn-icon" href="javascript:;" data-ripple="ripple">
+  <a class="mdui-btn mdui-btn-icon" href="javascript:;" data-ripple="ripple" id="toolbar" @click="rippleWidth <= 980 ? mobile() : toolbar()">
     <i class="fa fa-bars"></i>
   </a>
 </template>
 
 <script>
 export default {
-  name: 'Buttom'
+  name: 'Buttom',
+  data() {
+    return {
+      rippleWidth: 0,
+    }
+  },
+
+  mounted() {
+    window.onresize = this.adjust;
+    this.adjust();
+
+  },
+
+  methods: {
+    adjust(obj) {
+      let bodyWidth = document.getElementsByTagName("body")[0].offsetWidth;
+
+      this.rippleWidth = bodyWidth
+
+      return { bodyWidth }
+    },
+
+    toolbar() {
+      let body = $("body");
+      let attr = body.attr("data-hidden");
+
+      if(attr === 'true') {
+        $(body).attr("data-hidden", "false");
+        $(body).removeClass("mdui-drawer-body-left");
+        $(".mdui-drawer").css('transform', 'translate(-330px, 48px)');
+      } else if (attr === 'false') {
+        $(body).attr("data-hidden", "true");
+        $(body).addClass("mdui-drawer-body-left");
+        $(".mdui-drawer").css('transform', '');
+      }
+
+      return;
+    },
+
+    mobile() {
+      let body = $("body");
+      let attr = body.attr("data-hidden");
+
+      if(attr === 'false') {
+        $(body).attr("data-hidden", "true").addClass("mdui-drawer-body-left-active").css({
+          "overflow": "hidden",
+        });
+        $(".mask-layer").fadeIn(300);
+        $(".mdui-drawer").css('transform', '');
+      } else if (attr === 'true') {
+        $(body).attr("data-hidden", "false").removeClass("mdui-drawer-body-left-active").attr("style", "");
+        $(".mask-layer").fadeOut(300);
+      }
+
+      return;
+    }
+  },
+
+  watch: {
+    rippleWidth(val, oldVal) {
+      $("body").attr("data-width", this.rippleWidth);
+
+      if (this.rippleWidth <= 980) {
+        $("body").attr("data-hidden", "false");
+      } else {
+        $("body").attr("data-hidden", "true");
+      }
+    }
+
+  }
 }
 </script>
 

@@ -22,6 +22,11 @@ export default {
   components: { Valine },
   name: 'ArticleMethod',
 
+  data() {
+    return {
+    }
+  },
+
   async asyncData ({ $content, params }) {
     const article = await $content('widget/ArticleMethod', params.slug).fetch();
 
