@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/ArticleMethod", {data:[{article:{slug:"ArticleMethod",title:"使用方法",about:"千叶麻衣",toc:[],body:{type:"root",children:[]},dir:"\u002Fwidget",path:"\u002Fwidget\u002FArticleMethod",extension:".md",createdAt:"2021-04-05T09:11:35.119Z",updatedAt:"2021-04-06T09:11:10.689Z"}}],fetch:{},mutations:void 0});
