@@ -5,6 +5,7 @@
     <div class="theme-item">
       <span @click="$colorMode.preference = 'light'">light</span>
       <span @click="$colorMode.preference = 'dark'">dark</span>
+      <span @click="$colorMode.preference = 'syblue'">Sky blue</span>
     </div>
 
   </div>
@@ -46,8 +47,8 @@ export default {
     display: none;
     position: absolute;
     z-index: 29;
-    bottom: -75px;
-    right: 40px;
+    bottom: -110px;
+    right: 30px;
     background-color: var(--bg-content);
     color: var(--font-color);
     border-radius: 3px;
