@@ -1,6 +1,6 @@
 <template>
   <div class="theme-modle">
-    <Icon type="ios-color-palette theme" @click="theme($el)" />
+    <Icon type="ios-color-palette theme" @click="theme" />
 
     <div class="theme-item">
       <span @click="$colorMode.preference = 'light'">light</span>
@@ -16,11 +16,23 @@ export default {
   name: 'Theme',
   colorMode: 'light',
 
-  methods: {
-    theme(el) {
-      $(".theme-modle .theme-item").stop().fadeToggle(300);
+  data() {
+    return {
     }
-  }
+  },
+
+  mounted () {
+    $(".theme-modle .theme").blur(function (e) {
+      console.log(1);
+    });
+  },
+
+  methods: {
+    theme() {
+      $(".theme-modle .theme-item").stop().fadeToggle(300);
+    },
+  },
+
 }
 </script>
 
