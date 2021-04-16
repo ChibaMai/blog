@@ -53,11 +53,11 @@ export default {
         $(body).attr("data-hidden", "true").addClass("mdui-drawer-body-left-active").css({
           "overflow": "hidden",
         });
-        $(".mask-layer").fadeIn(300);
+        $(".mask-layer").stop().fadeIn(300);
         $(".mdui-drawer").css('transform', '');
       } else if (attr === 'true') {
         $(body).attr("data-hidden", "false").removeClass("mdui-drawer-body-left-active").attr("style", "");
-        $(".mask-layer").fadeOut(300);
+        $(".mask-layer").stop().fadeOut(300);
       }
 
       return;
