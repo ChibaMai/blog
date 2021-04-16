@@ -8,6 +8,11 @@
     transform: translate(0, 48px);
   }
 
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
   // appbar style
   .mdui-toolbar > * {
     margin: 0 5px !important;
@@ -27,15 +32,22 @@
 
 }
 
+@media (min-width: 400px) {
+  .mdui-drawer-body-left-active .mdui-drawer {
+    transform: translate(0, 48px);
+  }
+}
+
+
 @media (min-width: 600px) {
   // body style
   .mdui-appbar-with-toolbar {
     padding-top: 64px;
   }
 
-  .mdui-drawer {
-    transform: translate(-330px, 64px);
-  }
+  // .mdui-drawer {
+  //   transform: translate(-330px, 64px);
+  // }
 
   .mdui-drawer-body-left-active .mdui-drawer {
     transform: translate(0, 64px);
@@ -97,20 +109,8 @@
     transform: translate(-330px, 48px);
   }
 
-  .mask-layer {
-    width: 100%;
-    height: 100%;
-    background-color: #151c23de;
-    position: absolute;
-    top: 0;
-    z-index: 8;
-    display: none;
-  }
-
   .mdui-hidden-sm-down {
     display: none;
   }
 
 }
-
-

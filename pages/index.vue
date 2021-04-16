@@ -1,7 +1,6 @@
 <template>
   <div id="body" class="mdui-container-fluid">
 
-
     <div class="article-method">
       <div class="">
         <div
@@ -18,6 +17,7 @@
             <div class="mdui-card-primary-subtitle">
               <span>{{ article.author }}</span>
               <span>更新于: {{ formatDate(article.updatedAt) }}</span>
+              <!-- <span>创建于: {{ formatDate(article.createdAt) }}</span> -->
             </div>
           </div>
           <!-- 卡片的内容 -->
@@ -61,7 +61,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .only([ 'title', 'author', 'path', 'slug', 'tags', 'description', 'createdAt', 'updatedAt' ])
-      .sortBy('createdAt', 'asc',)
+      .sortBy('updatedAt', 'desc',)
       .fetch();
 
       console.log(articles);
