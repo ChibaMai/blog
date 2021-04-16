@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/Portfolio", {data:[{article:{slug:"Portfolio",title:"作品集",toc:[],body:{type:"root",children:[]},dir:"\u002Fwidget",path:"\u002Fwidget\u002FPortfolio",extension:".md",createdAt:"2021-04-16T06:25:27.417Z",updatedAt:"2021-04-16T06:25:27.418Z"}}],fetch:{},mutations:void 0});
