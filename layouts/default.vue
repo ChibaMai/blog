@@ -15,6 +15,7 @@ import Foot from '~/components/base/Foot/Foot';
 import MaskLayer from '~/components/base/MaskLayer/MaskLayer';
 import Top from '~/components/base/Top/Top';
 import Drawer from '~/components/drawer/Drawer';
+import { ripple } from '~/module/tools';
 
 export default {
   data() {
@@ -23,17 +24,7 @@ export default {
   },
 
   mounted() {
-
-    new Ripple({
-      // 水波纹透明度
-      opacity: 0.6,
-      // 水波纹扩散速度
-      speed: "100ms",
-      // 水波纹颜色
-      bgColor: "rgba(0,0,0,.3)",
-      // 是否显示手型指针
-      cursor: true
-    });
+    ripple();
 
     $('[data-fancybox="preview"]').fancybox({
       thumbs: {
@@ -44,6 +35,12 @@ export default {
   },
 
   methods: {
+  },
+
+  watch: {
+    $route(to,from){
+      console.log([to, from]);
+    }
   },
 
   components: { Toolbar, Drawer, Top, Foot, MaskLayer, }

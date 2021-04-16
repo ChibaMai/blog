@@ -2,10 +2,10 @@
   <div class="mdui-appbar mdui-appbar-fixed">
     <div class="mdui-toolbar mdui-color-indigo">
       <Button />
-      <router-link
-        :to="{ name: 'index' }"
-        class="mdui-typo-headline"
-      >千叶麻衣 Blog</router-link>
+        <router-link
+          :to="{ name: 'index' }"
+          class="mdui-typo-headline"
+        >千叶麻衣 Blog</router-link>
       <Nav />
       <Theme />
       <Seach />

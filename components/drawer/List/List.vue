@@ -12,7 +12,7 @@
           >{{ item.title }}</MenuItem>
       </Submenu>
       <Submenu name="2">
-        <template slot="title" class="title"><Icon type="md-pricetag" class="mdui-icon mdui-text-color-orange" />页面</template>
+        <template slot="title" class="title"><Icon type="md-pricetag" class="mdui-icddon mdui-text-color-orange" />页面</template>
           <MenuItem
             v-for="(item, index) in collapseData.page" :key="index"
             :name="'2-' + index"
@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import collapse from './../../../api/collapse';
+import collapse from '../../../api/collapse';
 
 export default {
   name: 'List',
