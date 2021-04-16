@@ -1,7 +1,7 @@
 ---
 title: MarkDown
 author: 千叶麻衣
-description: 
+description: This post is originated from [here](https://gist.github.com/apackeer/4159268) and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.
 tags:
   - MarkDown
 archive: 
@@ -354,9 +354,9 @@ This line is only separated by a single newline, so it's a separate line in the 
 This is a regular paragraph.
 
 <table>
-    <tr>
-        <td>Foo</td>
-    </tr>
+  <tr>
+    <td>Foo</td>
+  </tr>
 </table>
 
 This is another regular paragraph.

@@ -15,11 +15,14 @@
               <router-link :to="article.path">{{ article.title }}</router-link>
               <!-- <a :href="article.path">{{ article.title }}</a> -->
             </div>
-            <div class="mdui-card-primary-subtitle">{{ article.author }}</div>
+            <div class="mdui-card-primary-subtitle">
+              <span>{{ article.author }}</span>
+              <span>更新于: {{ formatDate(article.updatedAt) }}</span>
+            </div>
           </div>
           <!-- 卡片的内容 -->
           <div class="mdui-card-content">
-            <nuxt-content :document="article" />
+            {{ article.description }}
           </div>
           <!-- 卡片的按钮 -->
           <div class="mdui-card-actions">
@@ -47,6 +50,7 @@
 <script>
 import Valine from '~/components/base/Valine/Valine.vue';
 import FloatingMenu from '~/components/floatingMenu/FloatingMenu';
+import Moment from 'moment'
 
 export default {
   data() {
@@ -56,8 +60,8 @@ export default {
 
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only([ 'title', 'author', 'path', 'slug', 'tags', 'body' ])
-      .sortBy('createdAt', 'desc',)
+      .only([ 'title', 'author', 'path', 'slug', 'tags', 'description', 'createdAt', 'updatedAt' ])
+      .sortBy('createdAt', 'asc',)
       .fetch();
 
       console.log(articles);
@@ -68,10 +72,12 @@ export default {
   },
 
   mounted() {
-    // this.rel()
   },
 
   methods: {
+    formatDate(date) {
+      return Moment(date).format('YYYY-MM-DD HH:mm:ss')
+    }
   },
 
   watch: {
@@ -97,7 +103,14 @@ export default {
     font-size: 14px;
     line-height: 24px;
     opacity: .54;
-    margin-top: 2px;
+  }
+
+  span {
+    margin-right: 6px;
+  }
+
+  span:last-child {
+    margin-right: 0;
   }
 }
 
@@ -107,8 +120,8 @@ export default {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  // margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 // 卡片的按钮
