@@ -7,9 +7,14 @@ export default {
   name: 'MaskLayer',
 
   methods: {
-    maskLayer () {
+    maskLayer() {
+      this.mobileSuccess("关闭菜单");
       $("body").attr("data-hidden", "false").removeClass("mdui-drawer-body-left-active").attr("style", "");
       $(".mask-layer").fadeOut(300);
+    },
+
+    mobileSuccess(string) {
+      this.$Message.success(string)
     }
   }
 }

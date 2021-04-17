@@ -33,7 +33,7 @@
                 data-ripple="ripple"
               >{{ item }}</a>
             </span>
-            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-icon " data-ripple="ripple"><Icon type="ios-arrow-down" /></button>
+            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-icon" @click="success(article.title)" data-ripple="ripple"><Icon type="ios-arrow-down" /></button>
           </div>
         </div>
       </div>
@@ -77,7 +77,16 @@ export default {
   methods: {
     formatDate(date) {
       return Moment(date).format('YYYY-MM-DD HH:mm:ss')
-    }
+    },
+
+    success (nodesc) {
+      console.log(nodesc);
+      this.$Notice.success({
+        title: nodesc,
+        // desc: nodesc ? '' : 'Here is the notification description. Here is the notification description.'，
+        duration: 1.8
+      });
+    },
   },
 
   watch: {
@@ -122,6 +131,7 @@ export default {
   -webkit-box-orient: vertical;
   margin-bottom: 10px;
   margin-top: 10px;
+  font-size: 14px;
 }
 
 // 卡片的按钮
