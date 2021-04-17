@@ -22,9 +22,6 @@ export default {
   },
 
   mounted () {
-    $(".theme-modle .theme").blur(function (e) {
-      console.log(1);
-    });
   },
 
   methods: {

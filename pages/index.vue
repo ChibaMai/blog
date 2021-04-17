@@ -64,7 +64,7 @@ export default {
       .sortBy('updatedAt', 'desc',)
       .fetch();
 
-      console.log(articles);
+    console.log(articles);
 
     return {
       articles,
@@ -109,7 +109,7 @@ export default {
 
   .mdui-card-primary-subtitle {
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     opacity: .54;
   }
