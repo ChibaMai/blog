@@ -115,8 +115,8 @@ export default {
   },
 
   server: {
-    port: 8000,
     // host: '0.0.0.0'
-    host: '192.168.1.2'
+    host: '0.0.0.0',
+    port: 443
   }
 }
