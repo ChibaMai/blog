@@ -71,7 +71,7 @@ export default {
       .sortBy('updatedAt', 'desc',)
       .fetch();
 
-    console.log(articles);
+    console.table(articles);
 
     return {
       articles,

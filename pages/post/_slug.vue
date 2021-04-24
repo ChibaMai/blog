@@ -20,13 +20,29 @@
     </div>
 
     <FloatingMenu />
+
+    <div class="anchor-link">
+      <ul>
+        <li
+          v-for="link of article.toc"
+          :key="link.id"
+          :class="{ 'font-semibold' : link.depth === 2
+        }">
+        <nuxtLink
+          :to="`#${link.id}`"
+          class="hover:underline"
+          :class="{ 'py-2' : link.depth === 2, 'ml-2 pb-2' : link.depth === 3
+          }">{{ link.text }}</nuxtLink>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import Valine from '~/components/base/Valine/Valine.vue';
+import Valine from '~/components/base/Valine/Valine';
 import FloatingMenu from '~/components/floatingMenu/FloatingMenu';
-import Moment from 'moment'
+import Moment from 'moment';
 
 export default {
   async asyncData({ $content, params }) {
@@ -35,7 +51,11 @@ export default {
       .only(['name', 'slug'])
       .where({ name: { $containsAny: article.tags } })
       .fetch()
-    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })))
+    const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })));
+
+    console.table(article);
+    console.table(tags);
+
     return {
       article,
       tags
@@ -48,16 +68,17 @@ export default {
     },
 
     success (nodesc) {
-      console.log(nodesc);
+      console.table(nodesc);
       this.$Notice.success({
         title: nodesc,
         // desc: nodesc ? '' : 'Here is the notification description. Here is the notification description.',
         duration: 1.8
       });
     },
+
   },
 
-  components: { FloatingMenu, Valine, },
+  components: { Valine, FloatingMenu },
 }
 </script>
 
@@ -86,5 +107,12 @@ export default {
       margin-right: 0;
     }
   }
+}
+
+.anchor-link {
+  display: none;
+  opacity: 1 !important;
+  position: fixed;
+  right: 0;
 }
 </style>

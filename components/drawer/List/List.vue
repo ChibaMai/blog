@@ -50,7 +50,7 @@ export default {
 
   mounted() {
     this.collapseData = collapse
-    console.log(this.collapseData);
+    console.table(this.collapseData);
   }
 
 }
