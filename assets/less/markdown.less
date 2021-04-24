@@ -16,14 +16,17 @@
     // border-radius: 2px;
     display: inline;
     padding: 1px 1px;
-    display: block !important;
+    // display: block !important;
     white-space: pre;
   }
 
   pre {
     line-height: 1.5em;
-    display: block !important;
+    // display: block !important;
     overflow: auto;
+    overflow-x: auto!important;
+    overflow-y: hidden!important;
+    // width: 500px;
   }
 
   strong, b{
@@ -45,7 +48,7 @@
   }
 
   table, pre, dl, blockquote, q, ul, ol {
-    margin: 10px 5px;
+    margin: 10px 0;
   }
 
   ul, ol {
@@ -205,5 +208,16 @@
   .article-method > * {
     word-wrap:break-word;
     word-break:break-all;
+  }
+
+  .nuxt-content {
+
+    h1 {
+      display: none;
+    }
+  }
+
+  .image {
+    display: block;
   }
 }

@@ -4,7 +4,16 @@
     <Icon type="md-notifications-outline" class="mdui-icon mdui-text-color-cyan" />
     <span class="hitokoto-content"
       :data-data="hitokotoContent.data"
+      v-if="hitokotoContent === undefined"
     >{{ hitokotoContent.data }}</span>
+    <span class="hitokoto-content"
+      :data-hitokoto="hitokoto.hitokoto"
+      :data-creator="hitokoto.creator"
+      :data-from="hitokoto.from"
+      :data-created_at="hitokoto.created_at"
+      :title="hitokoto.hitokoto"
+      v-else
+    >{{ hitokoto.hitokoto }}</span>
   </div>
 </template>
 
@@ -16,14 +25,17 @@ export default {
 
   data() {
     return {
-      hitokotoContent: {}
+      hitokotoContent: {},
+      hitokoto: {}
     }
   },
 
   mounted() {
-    axios.get("https://v1.hitokoto.cn/?encode=text").then(result => {
+    // https://v1.hitokoto.cn/?encode=text
+    // https://v1.hitokoto.cn/
+    axios.get("https://v1.hitokoto.cn/").then(result => {
       console.log(result);
-      this.hitokotoContent = result
+      this.hitokoto = result.data
     })
   }
 

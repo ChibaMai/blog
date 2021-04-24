@@ -8,6 +8,8 @@ archive:
   - 技术教程
 ---
 
+# MarkDown
+
 This post is originated from [here](https://gist.github.com/apackeer/4159268) and is used for testing markdown style. This post contains nearly every markdown usage. Make sure all the markdown elements below show up correctly.
 
 <!-- more -->
@@ -189,7 +191,7 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://hexo.io
 [1]: https://hexo.io/docs/
 [link text itself]: https://hexo.io/api/
-
+<!-- 
 ## Images
 
 ```markdown
@@ -234,9 +236,9 @@ print s
 ```
 No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
-```
+``` -->
 
-## Tables
+<!-- ## Tables
 
 ```markdown
 |                |ASCII                          |HTML                         |
@@ -283,21 +285,21 @@ Markdown | Less | Pretty
 Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
-1 | 2 | 3
+1 | 2 | 3 -->
 
-> You can find more information about **LaTeX** mathematical expressions [here](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+<!-- > You can find more information about **LaTeX** mathematical expressions [here](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference). -->
 
 
-## Blockquotes
+<!-- ## Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. -->
 
-## Horizontal Rule
+<!-- ## Horizontal Rule
 
 Three or more...
 
@@ -325,9 +327,9 @@ Asterisks
 
 ___
 
-Underscores
+Underscores -->
 
-
+<!-- 
 ## Line Breaks
 
 ```markdown
@@ -370,9 +372,9 @@ This is a regular paragraph.
     </tr>
 </table>
 
-This is another regular paragraph.
+This is another regular paragraph. -->
 
-## Youtube videos
+<!-- ## Youtube videos
 
 ```markdown
 <a href="https://www.youtube.com/watch?feature=player_embedded&v=ARted4RniaU
@@ -390,4 +392,4 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 Pure markdown version:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ARted4RniaU/0.jpg)](https://www.youtube.com/watch?v=ARted4RniaU)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ARted4RniaU/0.jpg)](https://www.youtube.com/watch?v=ARted4RniaU) -->

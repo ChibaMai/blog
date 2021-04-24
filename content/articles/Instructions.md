@@ -20,3 +20,11 @@ tags:
 archive: 
 ---
 ```
+
+## image
+
+```
+<a href="" data-fancybox="preview"  class="image">
+  <img src="">
+</a>
+```

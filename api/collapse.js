@@ -11,7 +11,7 @@ exports = module.exports = {
     { "title": "申请友链", "href": "/widget/FriendsChain" },
   ],
   links: [
-    { "title": "Aftersoil-wiki", "href": "https://wiki.aftersoil.xyz/" },
+    { "title": "Aftersoil-wiki", "href": "https://wiki.chibamai.xyz/" },
     { "title": "KivenBlog", "href": "https://kivenblog.fit/" },
     // { "title": "如优图床", "href": "https://img.rruu.net/" },
     { "title": "Fast", "href": "https://fast.com/" },

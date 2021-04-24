@@ -11,7 +11,11 @@
           <!-- 卡片的标题和副标题 -->
           <div class="mdui-card-primary">
             <div class="mdui-card-primary-title">
-              <router-link :to="article.path">{{ article.title }}</router-link>
+              <!-- :to="{ name: 'blog-slug', params: { slug: article.slug } }" -->
+              <!-- :to="article.path" -->
+              <router-link
+                :to="{ name: 'post-slug', params: { slug: article.slug } }"
+              >{{ article.title }}</router-link>
               <!-- <a :href="article.path">{{ article.title }}</a> -->
             </div>
             <div class="mdui-card-primary-subtitle">
@@ -21,9 +25,7 @@
             </div>
           </div>
           <!-- 卡片的内容 -->
-          <div class="mdui-card-content">
-            {{ article.description }}
-          </div>
+          <div class="mdui-card-content">{{ article.description }}</div>
           <!-- 卡片的按钮 -->
           <div class="mdui-card-actions">
             <span class="tags">
@@ -33,7 +35,12 @@
                 data-ripple="ripple"
               >{{ item }}</a>
             </span>
-            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-icon" @click="success(article.title)" data-ripple="ripple"><Icon type="ios-arrow-down" /></button>
+            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-btn-icon" @click="success(article.title)" data-ripple="ripple">
+              <!-- <router-link
+                :to="{ name: 'post-slug', params: { slug: article.slug } }"
+              ><Icon type="ios-arrow-down" /></router-link> -->
+              <Icon type="ios-arrow-down" />
+            </button>
           </div>
         </div>
       </div>

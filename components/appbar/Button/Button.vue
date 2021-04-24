@@ -83,6 +83,7 @@ export default {
   watch: {
     rippleWidth(val, oldVal) {
       $("body").attr("data-width", this.rippleWidth);
+      // $(".nuxt-content").attr("data-width", this.rippleWidth).css("width", this.rippleWidth - (240 + 275.875));
 
       if (this.rippleWidth <= 980) {
         $("body").attr("data-hidden", "false");
