@@ -84,7 +84,7 @@ export default {
   }
 
   .ivu-menu-submenu {
-    background-color: var(--bg-content);
+    background-color: var(--bg-content) !important;
     transition: all @appba-transition;
     color: var(--color-primary);
 
@@ -93,5 +93,9 @@ export default {
     }
   }
 
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  background: var(--bg-content);
 }
 </style>

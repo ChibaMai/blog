@@ -23,7 +23,7 @@ export default {
 <style lang="less" scoped>
 .mdui-color-theme {
   background-color: @footer-background-color;
-  color: white;
+  color: var(--color);
   padding-top: @footer-padding;
   padding-bottom: @footer-padding;
   margin-top: @footer-padding;

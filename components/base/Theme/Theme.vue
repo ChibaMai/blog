@@ -2,11 +2,11 @@
   <div class="theme-modle">
     <Icon type="ios-color-palette theme" @click="theme" />
 
-    <div class="theme-item">
+    <!-- <div class="theme-item">
       <span @click="$colorMode.preference = 'light'">light</span>
       <span @click="$colorMode.preference = 'dark'">dark</span>
       <span @click="$colorMode.preference = 'syblue'">Sky blue</span>
-    </div>
+    </div> -->
 
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
 
   methods: {
     theme() {
-      $(".theme-modle .theme-item").stop().fadeToggle(300);
+      this.$router.push({path:'/widget/Theme'})
     },
   },
 
@@ -36,10 +36,10 @@ export default {
 <style lang="less" scoped>
 .dark-mode body {
   background-color: #091a28;
-  color: #ebf4f1;
+  color: var(--color);
 }
 .sepia-mode body {
-  background-color: #f1e7d0;
+  background-color: var(--color);
   color: #433422;
 }
 
@@ -49,7 +49,7 @@ export default {
   .theme {
     font-size: 25px;
     cursor: pointer;
-    color: white;
+    color: var(--color);
   }
 
   .theme-item {
@@ -59,7 +59,7 @@ export default {
     bottom: -110px;
     right: 30px;
     background-color: var(--bg-content);
-    color: var(--font-color);
+    color: var(--color);
     border-radius: 3px;
     box-shadow: rgb(136 153 166 / 52%) 0 0px 15px 0px, rgb(136 153 166 / 42%) 0px 0px 3px 1px;
     user-select: none;

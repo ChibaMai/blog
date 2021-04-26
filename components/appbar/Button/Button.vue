@@ -98,6 +98,6 @@ export default {
 
 <style lang="less" scoped>
 .mdui-btn {
-  color: white !important;
+  color: var(--color) !important;
 }
 </style>

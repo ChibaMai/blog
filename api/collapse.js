@@ -5,6 +5,7 @@ exports = module.exports = {
   page: [
     // { "title": "文章使用方法", "href": "/widget/ArticleMethod" },
     // { "title": "联系我", "href": "/widget/ContactMe" },
+    { "title": "博客主题", "href": "/widget/Theme" },
     { "title": "About me", "href": "/widget/AboutMe" },
     { "title": "作品集", "href": "/widget/Portfolio" },
     { "title": "时光机", "href": "/widget/TimeMachine" },
