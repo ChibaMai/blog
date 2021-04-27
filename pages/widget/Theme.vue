@@ -8,7 +8,20 @@
         <p>《默认为 light》点击色块可更换主题的主色</p>
         <div class="color-button">
           <button
-            v-for="(item, index) in theme"
+            v-for="(item, index) in theme.global"
+            :key="index"
+            :data-md-color-primary="item.name"
+            :style="{
+              'background-color': item.color
+            }"
+            @click="$colorMode.preference = item.name"
+          >{{ item.name }}</button>
+        </div>
+        <h2>Accent colors 辅助色</h2>
+        <p>点击色块更换主题的辅助色</p>
+        <div class="color-button">
+          <button
+            v-for="(item, index) in theme.single"
             :key="index"
             :data-md-color-primary="item.name"
             :style="{
@@ -38,7 +51,7 @@ export default {
 
   data() {
     return {
-      theme: theme.list
+      theme: theme
     }
   },
 
