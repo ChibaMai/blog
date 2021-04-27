@@ -33,12 +33,12 @@ export default {
       let attr = body.attr("data-hidden");
 
       if(attr === 'true') {
-        this.success("关闭菜单")
+        this.success("关闭菜单");
         $(body).attr("data-hidden", "false");
         $(body).removeClass("mdui-drawer-body-left");
         $(".mdui-drawer").css('transform', 'translate(-330px, 48px)');
       } else if (attr === 'false') {
-        this.success("打开菜单")
+        this.success("打开菜单");
         $(body).attr("data-hidden", "true");
         $(body).addClass("mdui-drawer-body-left");
         $(".mdui-drawer").css('transform', '');
