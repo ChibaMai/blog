@@ -66,6 +66,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
+    'nuxt-seo',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -113,6 +114,18 @@ export default {
   render: {
     resourceHints: false
   },
+
+  seo: {
+		// Module options
+		baseUrl: 'https://blog.chibamai.xyz/',
+		name: '千叶麻衣 Blog',
+		title: '千叶 Blog - 分享互联网的宝藏',
+    templateTitle: '%name% - %title%',
+    keywords: ['千叶麻衣', '千叶', '麻衣', '语心', '技术博客', '免费软件分享', 'aftersoil', 'aftersoil-blog', 'wiki',],
+		description: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！',
+		canonical: 'auto',
+		isForcedTrailingSlash: false
+	},
 
   server: {
     // host: '0.0.0.0'

@@ -21,6 +21,7 @@
     "markdown-loader": "^6.0.0",
     "moment": "^2.29.1",
     "nuxt": "^2.15.3",
+    "nuxt-seo": "^1.5.0",
     "prism-themes": "^1.6.0",
     "vue-rippler": "^1.3.3"
   },
