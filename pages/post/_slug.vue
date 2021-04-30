@@ -45,6 +45,18 @@ import FloatingMenu from '~/components/floatingMenu/FloatingMenu';
 import Moment from 'moment';
 
 export default {
+  data() {
+    return {
+      title: this.$route.params.slug,
+    }
+  },
+
+  head() {
+    return {
+      title: `千叶麻衣 Blog | ${this.title}`
+    }
+  },
+
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const tagsList = await $content('tags')
@@ -60,6 +72,11 @@ export default {
       article,
       tags
     }
+  },
+
+  mounted() {
+
+    console.log(this.title);
   },
 
   methods: {

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '千叶 Blog - 分享互联网的宝藏',
+    // title: '千叶 Blog - 分享互联网的宝藏',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
@@ -119,8 +119,7 @@ export default {
 		// Module options
 		baseUrl: 'https://blog.chibamai.xyz/',
 		name: '千叶麻衣 Blog',
-		title: '千叶 Blog - 分享互联网的宝藏',
-    templateTitle: '%name% - %title%',
+    templateTitle: '%name%',
     keywords: ['千叶麻衣', '千叶', '麻衣', '语心', '技术博客', '免费软件分享', 'aftersoil', 'aftersoil-blog', 'wiki',],
 		description: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！',
 		canonical: 'auto',

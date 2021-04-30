@@ -31,6 +31,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  // z-index: 10;
   max-width: 240px;
   overflow-x: hidden;
   overflow-y: auto;

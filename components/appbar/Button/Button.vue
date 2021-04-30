@@ -36,7 +36,7 @@ export default {
         this.success("关闭菜单");
         $(body).attr("data-hidden", "false");
         $(body).removeClass("mdui-drawer-body-left");
-        $(".mdui-drawer").css('transform', 'translate(-330px, 48px)');
+        $(".mdui-drawer").css('transform', 'translate(-330px, 64px)');
       } else if (attr === 'false') {
         this.success("打开菜单");
         $(body).attr("data-hidden", "true");
