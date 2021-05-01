@@ -51,7 +51,11 @@ export default {
   mounted() {
     this.collapseData = collapse
     console.table(this.collapseData);
-  }
+  },
+
+  watch: {
+
+  },
 
 }
 </script>

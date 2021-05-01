@@ -22,6 +22,12 @@ export default {
   components: { Valine },
   name: 'TimeMachine',
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | 时光机`,
+    }
+  },
+
   async asyncData ({ $content, params }) {
     const article = await $content('widget/TimeMachine', params.slug).fetch();
 
@@ -44,4 +50,7 @@ export default {
 
 <style lang="less" scoped>
 
+.time-line{
+  list-style-type: none !important;
+}
 </style>

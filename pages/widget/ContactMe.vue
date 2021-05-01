@@ -28,6 +28,12 @@ export default {
     return { article }
   },
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | 联系我`
+    }
+  },
+
   methods: {
     ArticleMethodDate(date) {
       const options = {

@@ -29,6 +29,12 @@ export default {
     return { article }
   },
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | About me`
+    }
+  },
+
   methods: {
     ArticleMethodDate(date) {
       const options = {

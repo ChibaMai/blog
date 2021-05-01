@@ -17,7 +17,7 @@
 import Theme from '~/components/base/Theme/Theme'
 import Button from '../Button/Button'
 import Nav from '../Nav/Nav.vue'
-import Seach from '../Seach/Seach.vue'
+import Seach from '../Seach/Search.vue'
 
 export default {
   components: { Button, Seach, Nav, Theme },

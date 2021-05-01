@@ -16,6 +16,7 @@
           placeholder="请输入您要搜索的字段"
           name="search"
           id="search"
+          focus="focus"
         >
         <ul class="search-list" v-if="articles.length">
           <li v-for="article of articles" :key="article.slug">
@@ -69,9 +70,10 @@ export default {
       //   title: '打开搜索',
       //   duration: 1.5
       // });
-      $("body").css("overflow", "hidden");
+      $("body").attr("data-search", true).css("overflow", "hidden");
       $(".search > .search-content").fadeIn(300);
       $(".mdui-drawer").css("z-index", "-9");
+      $('#search').focus();
     },
 
     searchClose() {
@@ -79,7 +81,7 @@ export default {
       //   title: '关闭搜索',
       //   duration: 1.5
       // });
-      $("body").attr("style", "");
+      $("body").attr("data-search", false).attr("style", "");
       $(".search > .search-content").fadeOut(300);
       $(".mdui-drawer").attr("style", "");
 
@@ -155,10 +157,12 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 50%;
+    width: 55%;
     z-index: 22;
     margin: 0 auto;
     padding-top: 50px;
+    overflow-y: auto;
+    padding-right: 20px;
   }
 
   input {

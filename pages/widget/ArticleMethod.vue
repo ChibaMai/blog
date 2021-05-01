@@ -27,6 +27,12 @@ export default {
     }
   },
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | 标签云`
+    }
+  },
+
   async asyncData ({ $content, params }) {
     const article = await $content('widget/ArticleMethod', params.slug).fetch();
 

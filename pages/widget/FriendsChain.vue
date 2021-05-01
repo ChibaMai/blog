@@ -29,6 +29,12 @@ export default {
     return { article }
   },
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | 申请友链`
+    }
+  },
+
   methods: {
     ArticleMethodDate(date) {
       const options = {

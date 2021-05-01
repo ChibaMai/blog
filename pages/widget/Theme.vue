@@ -55,6 +55,12 @@ export default {
     }
   },
 
+  head() {
+    return {
+      title: `千叶麻衣 Blog | 博客主题`
+    }
+  },
+
   methods: {
   }
 }
