@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/TimeMachine", {data:[{article:{slug:"TimeMachine",title:"时光机",toc:[],body:{type:"root",children:[]},dir:"\u002Fwidget",path:"\u002Fwidget\u002FTimeMachine",extension:".md",createdAt:"2021-05-01T14:52:43.212Z",updatedAt:"2021-05-01T14:52:43.281Z"}}],fetch:{},mutations:void 0});
