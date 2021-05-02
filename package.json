@@ -12,7 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/axios": "^5.13.1",
-    "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/lunr-module": "^0.3.2",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5",
     "core-js": "^3.9.1",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.5",
+    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.0.0",
     "less": "^4.1.1",
     "less-loader": "^7.3.0",

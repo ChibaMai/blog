@@ -21,7 +21,8 @@ import Seach from '../Seach/Search.vue'
 
 export default {
   components: { Button, Seach, Nav, Theme },
-  name: 'Toolbae'
+  name: 'Toolbae',
+
 }
 </script>
 

@@ -54,7 +54,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -62,22 +63,32 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
     'nuxt-seo',
+    {
+      src: '@nuxtjs/lunr-module',
+      // These are the default options:
+      // options: {
+      //   includeComponent: true,
+      //   globalComponent: false,
+      //   css: true,
+      //   defaultLanguage: 'en',
+      //   languages: false,
+      //   path: 'search-index',
+      //   ref: 'id',
+      //   fields: [
+      //     'title',
+      //     'body'
+      //   ]
+      // }
+    }
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'zh'
-    }
-  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
@@ -100,20 +111,40 @@ export default {
     ]
   },
 
-  // pwa
-  manifest: {
-    name: "千叶 Blog - 分享互联网的宝藏",
-    short_name: "千叶 Blog",
-    description: "本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！",
-    background_color: "#c2185b",
-    theme_color: "#c2185b",
-    lang: "zh",
-    start_url: "/",
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      name: "千叶 Blog - 分享互联网的宝藏",
+      short_name: "千叶 Blog",
+      description: "本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！",
+      background_color: "#c2185b",
+      theme_color: "#c2185b",
+      lang: "zh",
+      start_url: "/",
+    },
+
+    // disables the icon module
+    icon: {
+      source: ["~/static/icons/icon.png"],
+      sizes: [150],
+      targetDir: "icons",
+      plugin: true
+    }
   },
 
-  render: {
-    resourceHints: false
-  },
+  // render: {
+  //   http2: {
+  //     push: true
+  //   },
+  //   static: {
+  //     maxAge: "1y",
+  //     setHeaders(res, path) {
+  //       if (path.includes("sw.js")) {
+  //         res.setHeader("Cache-Control", `public, max-age=${15 * 60}`);
+  //       }
+  //     }
+  //   }
+  // },
 
   seo: {
 		// Module options
