@@ -11,10 +11,10 @@
             v-for="(item, index) in theme.global"
             :key="index"
             :data-md-color-primary="item.name"
+            @click="$colorMode.preference = item.name"
             :style="{
               'background-color': item.color
             }"
-            @click="$colorMode.preference = item.name"
           >{{ item.name }}</button>
         </div>
         <h2>Accent colors 辅助色</h2>
@@ -24,10 +24,10 @@
             v-for="(item, index) in theme.single"
             :key="index"
             :data-md-color-primary="item.name"
+            @click="$colorMode.preference = item.name"
             :style="{
               'background-color': item.color
             }"
-            @click="$colorMode.preference = item.name"
           >{{ item.name }}</button>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default {
 
   data() {
     return {
-      theme: theme
+      theme: theme,
     }
   },
 

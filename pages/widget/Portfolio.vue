@@ -3,8 +3,8 @@
 
     <div class="article-method">
       <div class="mdui-card mdui-hoverable">
-        <h1>{{ article.title }}</h1>
-        <nuxt-content :document="article" />
+        <h1>作品集</h1>
+        <!-- <nuxt-content :document="article" /> -->
       </div>
 
       <div class="mdui-card mdui-hoverable vcomments">
@@ -22,11 +22,10 @@ export default {
   components: { Valine },
   name: 'Portfolio',
 
-  async asyncData ({ $content, params }) {
-    const article = await $content('widget/Portfolio', params.slug).fetch();
-
-    return { article }
-  },
+  // async asyncData ({ $content, params }) {
+  //   const article = await $content('widget/Portfolio', params.slug).fetch();
+  //   return { article }
+  // },
 
   head() {
     return {
@@ -35,15 +34,6 @@ export default {
   },
 
   methods: {
-    ArticleMethodDate(date) {
-      const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }
-
-      return new Date(date).toLocaleDateString('en', options)
-    }
   }
 }
 </script>

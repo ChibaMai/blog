@@ -8,7 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
-      { name: 'keywords', content: '千叶麻衣,千叶,麻衣,语心,技术博客,免费软件分享,aftersoil,aftersoil-blog,wiki,' },
+      { name: 'keywords', content: '千叶blog,千叶麻衣 blog,千叶麻衣,千叶,麻衣,语心,技术博客,免费软件分享,aftersoil,aftersoil-blog,wiki,' },
       { hid: 'description', name: 'description', content: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！' },
       { name: 'google-site-verification', content: 'aAQV8IgxP5WQiAuShum5fEQxY5S98Q8JSZoJe3kmwyY' },
       { name: 'baidu-site-verification', content: 'code-SVyZBBxyAv' },
@@ -160,6 +160,6 @@ export default {
   server: {
     // host: '0.0.0.0'
     host: '0.0.0.0',
-    port: 443,
+    port: 8003,
   }
 }
