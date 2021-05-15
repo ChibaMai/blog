@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/Portfolio", {data:[{}],fetch:{},mutations:void 0});
