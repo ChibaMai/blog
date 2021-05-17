@@ -47,6 +47,8 @@ export default {
   plugins: [
     { src: '~plugins/iview', ssr: true },
     { src: '~/plugins/vue-lazyload', ssr: true },
+    { src: '@/plugins/vue-mavon-editor', ssr: false },
+    { src: '@/plugins/FriendDatabase', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
