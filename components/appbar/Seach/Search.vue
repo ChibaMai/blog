@@ -98,7 +98,7 @@ export default {
       }
 
       // console.table(searchQuery);
-      console.table(this.articles);
+      // console.table(this.articles);
 
       this.articles = await this.$content('articles')
       .limit(999)
@@ -107,8 +107,8 @@ export default {
     },
 
     '$route' (res) {
-      console.table(res);
-      console.log('关闭搜索');
+      // console.table(res);
+      // console.log('关闭搜索');
       this.searchClose();
     }
   },

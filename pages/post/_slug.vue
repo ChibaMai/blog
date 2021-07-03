@@ -65,8 +65,8 @@ export default {
       .fetch()
     const tags = Object.assign({}, ...tagsList.map((s) => ({ [s.name]: s })));
 
-    console.table(article);
-    console.table(tags);
+    // console.table(article);
+    // console.table(tags);
 
     return {
       article,
@@ -75,8 +75,7 @@ export default {
   },
 
   mounted() {
-
-    console.log(this.title);
+    // console.log(this.title);
   },
 
   methods: {
@@ -85,7 +84,7 @@ export default {
     },
 
     success (nodesc) {
-      console.table(nodesc);
+      // console.table(nodesc);
       this.$Notice.success({
         title: nodesc,
         // desc: nodesc ? '' : 'Here is the notification description. Here is the notification description.',

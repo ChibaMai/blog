@@ -71,7 +71,7 @@ export default {
       .sortBy('createdAt', 'desc',)
       .fetch();
 
-    console.table(articles);
+    // console.table(articles);
 
     return {
       articles,
@@ -87,7 +87,7 @@ export default {
     },
 
     success (nodesc) {
-      console.log(nodesc);
+      // console.log(nodesc);
       this.$Notice.success({
         title: nodesc,
         // desc: nodesc ? '' : 'Here is the notification description. Here is the notification description.'，

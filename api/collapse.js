@@ -10,6 +10,8 @@ exports = module.exports = {
     // { "title": "作品集", "href": "/widget/Portfolio" },
     // { "title": "时光机", "href": "/widget/TimeMachine" },
     { "title": "申请友链", "href": "/widget/FriendsChain" },
+  ],
+  server: [
     { "title": "新建文章", "href": "/widget/CreatePost" },
     { "title": "修改文章", "href": "/widget/UpdatePost" },
     { "title": "查询全部文章", "href": "/widget/SelectPost" },
@@ -19,5 +21,5 @@ exports = module.exports = {
     { "title": "KivenBlog", "href": "https://kivenblog.fit/" },
     // { "title": "如优图床", "href": "https://img.rruu.net/" },
     { "title": "Fast", "href": "https://fast.com/" },
-  ]
+  ],
 }

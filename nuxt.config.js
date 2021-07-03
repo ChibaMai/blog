@@ -11,7 +11,6 @@ export default {
       { name: 'keywords', content: '千叶blog,千叶麻衣 blog,千叶麻衣,千叶,麻衣,语心,技术博客,免费软件分享,aftersoil,aftersoil-blog,wiki,' },
       { hid: 'description', name: 'description', content: '本站是一个牛皮的技术博客。记录生活中遇到的问题，以及经验总结和分享！' },
       { name: 'google-site-verification', content: 'aAQV8IgxP5WQiAuShum5fEQxY5S98Q8JSZoJe3kmwyY' },
-      // { name: 'baidu-site-verification', content: 'code-SVyZBBxyAv' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -48,7 +47,6 @@ export default {
     { src: '~plugins/iview', ssr: true },
     { src: '~/plugins/vue-lazyload', ssr: true },
     { src: '@/plugins/vue-mavon-editor', ssr: false },
-    { src: '@/plugins/FriendDatabase', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -90,7 +88,14 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true,
+    baseURL: 'http://localhost:3000'
+  },
+
+  proxy: {
+    '/blog/': 'http://localhost:3000/'
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {

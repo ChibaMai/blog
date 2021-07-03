@@ -39,7 +39,7 @@ export default {
 
   watch: {
     $route(to,from){
-      console.table([to, from]);
+      // console.table([to, from]);
     }
   },
 

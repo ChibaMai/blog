@@ -30,7 +30,7 @@ export default {
 
   mounted() {
     this.list = error.list;
-    console.log(this.list);
+    // console.log(this.list);
   }
 }
 </script>

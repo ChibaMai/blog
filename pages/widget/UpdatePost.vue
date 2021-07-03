@@ -5,7 +5,7 @@
       <BreadcrumbItem to="/widget/UpdatePost">更新数据</BreadcrumbItem>
       <BreadcrumbItem to="/widget/SelectPost">查询数据</BreadcrumbItem>
     </Breadcrumb>
-    <input type="text" name="" id="post" placeholder="请输入您要修改的文章ID" v-model="post" @blur="postFun()">
+    <input type="text" name="" id="post" placeholder="请输入您要修改的文章ID" v-model="post" @blur="getModifiedValue()">
     <input type="text" name="" id="title" placeholder="请修改标题" v-model="title" :disabled="disabled">
     <input type="text" name="" id="href" placeholder="跳转地址" v-model="href" :disabled="disabled">
     <input type="text" name="" id="description" placeholder="请修改描述" v-model="description" :disabled="disabled">
@@ -14,14 +14,12 @@
     <no-ssr>
       <mavon-editor :toolbars="markdownOption" ref="md" @keyup.native="inputRendering($event)" v-model="handbook" :disabled="disabled" />
     </no-ssr>
-
     <button data-ripple="ripple" @click="update()">更新文章</button>
   </div>
 </template>
 
 <script>
-import { mavonEditor } from 'mavon-editor'
-import Dexie from 'dexie'
+import axios from 'axios';
 
 export default {
   data() {
@@ -68,7 +66,8 @@ export default {
       render: {},
       tagsData: [],
       disabled: true,
-      creation_Time: 0
+      creation_Time: '',
+      dataTemp: {},
     };
   },
 
@@ -76,109 +75,41 @@ export default {
     this.postID = this.$route.params.id;
     this.post = this.postID;
 
-    this.postFun();
+    this.getModifiedValue();
   },
 
   methods: {
-    // 更新文章
+    // 获取修改值
+    getModifiedValue() {
+      this.obtain();
+    },
+
     update() {
-      let num = Number(this.post);
-      let blog = new Dexie('MyDatabase');
-
-      let Intitle = this.title;
-      let Inauthor = this.author;
-      let Intags = this.tags;
-      let Inrender = this.render;
-      let Indescription = this.description;
-      let Inhref = this.href;
-      let date = new Date().getTime();
-
-      blog.version(1).stores({
-        friends: "++id, href, title, tags"
-      });
-
-      blog.friends.put({
-        id: num,
-        title: Intitle,
-        author: Inauthor,
-        tags: Intags.split(" "),
-        html: Inrender.html,
-        md: Inrender.md,
-        description: Indescription,
-        href: Inhref,
-        updateTime: date,
-        creationTime: this.creation_Time,
-      })
-
-      this.$Notice.success({
-        title: '数据修改成功',
-        duration: 1.5
-      });
-
+      console.log("OK");
     },
 
-    // 检查是否为空
-    isEmpty(string) {
-      return string === "" ? false : true
-    },
+    obtain() {
+      axios.post("/blog/SingleQuery", {
+        params: this.post
+      }).then(res => {
 
-    // 查询获取修改的数据
-    postFun() {
-      let num = Number(this.post);
+        if (res.data.data.length === 0) {
+          this.$Notice.error({
+            title: `数据库未有该数据，请重新输入`,
+            duration: 1.5
+          });
+        } else {
+          this.$Notice.success({
+            title: `数据查询成功`,
+            duration: 1.5
+          });
 
-      if (!num) {
-        this.isWrite = true;
+          this.dataTemp = res.data.data
+        }
 
-        this.$Notice.success({
-          title: '请输入数字',
-          duration: 1.5
-        });
-
-        this.handbook = "";
-        this.title = "";
-        this.tags = "";
-        this.description = "";
-        this.href = "";
-
-        this.post = "";
-      } else {
-        this.disabled = false
-
-        this.$Notice.success({
-          title: '正在查询中',
-          duration: 1.5
-        });
-
-        let blog = new Dexie('MyDatabase');
-
-        blog.version(1).stores({
-          friends: "++id, href, title, tags"
-        });
-
-        blog.friends.get(num).then(result => {
-          console.table(result);
-
-          if (!result) {
-            this.disabled = true;
-
-            this.$Notice.success({
-              title: '未找到改文章，请从新输入',
-              duration: 1.5
-            });
-
-            this.post = "";
-
-            return
-          } else {
-            this.handbook = result.md;
-            this.title = result.title;
-            this.tags = result.tags.join(" ");
-            this.description = result.description;
-            this.href = result.href;
-            this.creation_Time = result.creationTime
-          }
-        })
-      }
+      }).catch(err => {
+        console.log(err);
+      });
 
     },
 

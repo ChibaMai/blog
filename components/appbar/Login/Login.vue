@@ -1,4 +1,7 @@
 <template>
+  <div class="login">
+    <router-link to="/post/login">Log in</router-link>
+  </div>
 </template>
 
 <script>
@@ -7,6 +10,11 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="less" scoped>
+.login {
 
+  a {
+    color: var(--color);
+  }
+}
 </style>

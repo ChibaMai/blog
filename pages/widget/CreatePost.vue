@@ -18,8 +18,7 @@
 </template>
 
 <script>
-import { mavonEditor } from 'mavon-editor'
-import Dexie from 'dexie'
+import axios from 'axios';
 
 export default {
   data() {
@@ -81,25 +80,26 @@ export default {
         let Indescription = this.description;
         let Inhref = this.href;
         let date = new Date().getTime();
-        let blog = new Dexie('MyDatabase');
 
-        let data = {
-          title: Intitle,
-          author: Inauthor,
-          tags: Intags,
-          html: Inrender.html,
-          md: Inrender.md,
-          description: Indescription,
-          href: Inhref,
-          creationTime: date,
-          updateTime: date
-        };
+        this.tags = Intags.join('/');
 
-        blog.version(1).stores({
-          friends: "++id, href, title, tags"
+        axios.post('/blog/insert', {
+          params: {
+            title: Intitle,
+            author: Inauthor,
+            tags: this.tags,
+            html: Inrender.html,
+            md: Inrender.md,
+            description: Indescription,
+            href: Inhref,
+            creationTime: date,
+            updateTime: date
+          }
+        }).then(res => {
+          // console.log(res);
+        }).catch(err => {
+          // console.log(err);
         });
-
-        blog.friends.add(data);
 
         this.$Notice.success({
           title: '数据提交成功',

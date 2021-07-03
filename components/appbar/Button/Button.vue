@@ -10,13 +10,13 @@ export default {
   data() {
     return {
       rippleWidth: 0,
+      status: null,
     }
   },
 
   mounted() {
     window.onresize = this.adjust;
     this.adjust();
-
   },
 
   methods: {
@@ -63,8 +63,13 @@ export default {
         $(body).attr("data-hidden", "false").removeClass("mdui-drawer-body-left-active").attr("style", "");
         $(".mask-layer").stop().fadeOut(300);
       }
+    },
 
-      return;
+    dataHidden(status) {
+      cookie.set('data-hidden', status, {
+        expires: 365,
+        path: "/"
+      })
     },
 
     success(string) {
@@ -90,6 +95,10 @@ export default {
       } else {
         $("body").attr("data-hidden", "true");
       }
+    },
+
+    status(val) {
+      console.log(val);
     }
 
   }

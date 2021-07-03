@@ -26,11 +26,11 @@
           <td>{{ item.id }}</td>
           <td>{{ item.title }}</td>
           <td>{{ item.author }}</td>
-          <td>{{ item.tags.join(" / ") }}</td>
+          <td>{{ item.tags }}</td>
           <td class="main-content">{{ item.description }}</td>
           <td class="main-content"><router-link to="/">查看</router-link></td>
           <td><router-link :to="{ name: 'widget-UpdatePost', params: { id: item.id }}">修改</router-link></td>
-          <td><a href="javascript:void(0);" @click="deleteData(item.id)">删除</a></td>
+          <td><a href="javascript:void(0);" @click="confirm(item.id)">删除</a></td>
         </tr>
       </tbody>
     </table>
@@ -38,12 +38,12 @@
 </template>
 
 <script>
-import Dexie from 'dexie'
+import axios from 'axios'
 
 export default {
   data() {
     return {
-      data: []
+      data: [],
     }
   },
 
@@ -52,40 +52,51 @@ export default {
   },
 
   methods: {
-    deleteData(id) {
-      let blog = new Dexie('MyDatabase');
+    confirm (id) {
+      this.$Modal.confirm({
+        title: '是否删除改数据',
+        onOk: () => {
+          axios.post('/blog/delete',{
+            params: id
+          }).then(res => {
+            if (res.data.code === 200) {
+              this.$Notice.success({
+                title: `位置 ${id} 删除成功`,
+                duration: 1.5
+              });
 
-      blog.version(1).stores({
-        friends: "++id, href, title, tags"
+              // 重新请求数据
+              this.load();
+            } else if (res.data.code === 201) {
+              this.$Notice.error({
+                title: `服务端发生错误，数据删除失败`,
+                duration: 1.5
+              });
+            }
+          }).catch(err => {
+            console.log(err);
+          });
+        },
+        onCancel: () => {
+          this.$Notice.error({
+            title: `位置 ${id} 删除失败`,
+            duration: 1.5
+          });
+          this.load();
+        }
       });
-
-      blog.friends.delete(id);
-
-      blog.close;
-
-      this.$Notice.success({
-        title: `位置${id}删除成功`,
-        duration: 1.5
-      });
-
-      this.load()
     },
 
-    // 初始化
     load() {
-      let blog = new Dexie('MyDatabase');
+      axios.get('/blog/inquire').then(res => {
+        let obj = res.data.data;
 
-      blog.version(1).stores({
-        friends: "++id, href, title, tags"
-      });
-
-      blog.friends.toArray().then(result => {
-        this.data = result
-        // console.log(result);
+        this.data = obj
+      }).catch(err => {
+        console.log(err);
       })
+    },
 
-      blog.close;
-    }
   },
 
 

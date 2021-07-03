@@ -34,8 +34,8 @@ export default {
     // https://v1.hitokoto.cn/?encode=text
     // https://v1.hitokoto.cn/
     axios.get("https://v1.hitokoto.cn/").then(result => {
-      console.table(result.config);
-      console.table(result.data);
+      // console.table(result.config);
+      // console.table(result.data);
       this.hitokoto = result.data
     })
   }

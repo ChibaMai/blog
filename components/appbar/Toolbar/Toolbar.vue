@@ -7,6 +7,7 @@
           class="mdui-typo-headline"
         >千叶麻衣 Blog</router-link>
       <Nav />
+      <Login />
       <Theme />
       <Seach />
     </div>
@@ -16,11 +17,12 @@
 <script>
 import Theme from '~/components/base/Theme/Theme'
 import Button from '../Button/Button'
+import Login from '../Login/Login.vue'
 import Nav from '../Nav/Nav.vue'
 import Seach from '../Seach/Search.vue'
 
 export default {
-  components: { Button, Seach, Nav, Theme },
+  components: { Button, Seach, Nav, Theme, Login },
   name: 'Toolbae',
 
 }

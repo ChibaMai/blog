@@ -11,6 +11,7 @@
             data-ripple="ripple"
           >{{ item.title }}</MenuItem>
       </Submenu>
+
       <Submenu name="2">
         <template slot="title" class="title"><Icon type="md-pricetag" class="mdui-icddon mdui-text-color-orange" />页面</template>
           <MenuItem
@@ -22,6 +23,16 @@
       </Submenu>
 
       <Submenu name="3">
+        <template slot="title" class="title"><Icon type="md-desktop mdui-icddon mdui-text-color-orange" />后端服务</template>
+          <MenuItem
+            v-for="(item, index) in collapseData.server" :key="index"
+            :name="'2-' + index"
+            :to="item.href"
+            data-ripple="ripple"
+          >{{ item.title }}</MenuItem>
+      </Submenu>
+
+      <Submenu name="4">
         <template slot="title"><Icon type="md-ionic" class="mdui-icon mdui-text-color-green" />友情链接</template>
           <MenuItem
             v-for="(item, index) in collapseData.links" :key="index"
@@ -50,7 +61,7 @@ export default {
 
   mounted() {
     this.collapseData = collapse
-    console.table(this.collapseData);
+    // console.table(this.collapseData);
   },
 
   watch: {
