@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/CreatePost", {data:[{}],fetch:{},mutations:[]});

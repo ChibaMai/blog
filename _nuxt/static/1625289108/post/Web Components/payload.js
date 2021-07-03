@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/post/Web%20Components", {data:[{}],fetch:{},mutations:[]});

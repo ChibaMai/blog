@@ -1,17 +1,4 @@
 /*!
-  * vue-router v3.5.1
-  * (c) 2021 Evan You
-  * @license MIT
-  */
-
-/*!
- * Vue.js v2.6.12
- * (c) 2014-2020 Evan You
- * Released under the MIT License.
- */
-
-
-/*!
  * Snowball JavaScript Library v0.3
  * http://code.google.com/p/urim/
  * http://snowball.tartarus.org/
@@ -83,6 +70,39 @@
  */
 
 
+//! moment.js
+
+//! moment.js locale configuration
+
+
+/*!
+ * JavaScript Cookie v2.2.1
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
+ */
+
+
+/*!
+  * vue-router v3.5.1
+  * (c) 2021 Evan You
+  * @license MIT
+  */
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+
 /*!
  * Vue-Lazyload.js v1.3.3
  * (c) 2019 Awe <hilongjw@gmail.com>
@@ -125,8 +145,3 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-
-//! moment.js
-
-//! moment.js locale configuration
