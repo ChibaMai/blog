@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/SelectPost", {data:[{}],fetch:{},mutations:[]});

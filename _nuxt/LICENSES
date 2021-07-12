@@ -76,15 +76,6 @@
 
 
 /*!
- * JavaScript Cookie v2.2.1
- * https://github.com/js-cookie/js-cookie
- *
- * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
- * Released under the MIT license
- */
-
-
-/*!
   * vue-router v3.5.1
   * (c) 2021 Evan You
   * @license MIT
@@ -100,6 +91,15 @@
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
+ */
+
+
+/*!
+ * JavaScript Cookie v2.2.1
+ * https://github.com/js-cookie/js-cookie
+ *
+ * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
+ * Released under the MIT license
  */
 
 

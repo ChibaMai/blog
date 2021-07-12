@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/widget/ArticleMethod", (function(a){return {data:[{article:{slug:"ArticleMethod",title:"标签云",about:"千叶麻衣",toc:[],body:{type:"root",children:[]},dir:"\u002Fwidget",path:"\u002Fwidget\u002FArticleMethod",extension:".md",createdAt:a,updatedAt:a}}],fetch:{},mutations:[]}}("2021-07-03T05:14:42.337Z")));
