@@ -22,7 +22,7 @@
           >{{ item.title }}</MenuItem>
       </Submenu>
 
-      <Submenu name="3">
+      <Submenu name="3" v-if="active">
         <template slot="title" class="title"><Icon type="md-desktop mdui-icddon mdui-text-color-orange" />后端服务</template>
           <MenuItem
             v-for="(item, index) in collapseData.server" :key="index"
@@ -55,13 +55,23 @@ export default {
 
   data() {
     return {
-      collapseData: {}
+      collapseData: {},
+      active: false
     }
   },
 
   mounted() {
     this.collapseData = collapse
     // console.table(this.collapseData);
+
+    // get login cookie
+    let off = Number(Cookies.get('login'));
+    // console.log(off);
+    this.active = Boolean(off);
+  },
+
+  methods: {
+
   },
 
   watch: {

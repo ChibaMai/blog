@@ -113,8 +113,6 @@ export default {
         this.description = ""
         this.href = ""
 
-        blog.close
-
       } else {
           this.$Notice.success({
           title: '数据不能为空',

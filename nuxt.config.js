@@ -23,6 +23,7 @@ export default {
       { src: 'https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js' },
       // { src: 'https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js' },
       { src: 'https://cdn.jsdelivr.net/npm/aftersoil_rippler@1.3.0/rippler.js' },
+      { src: 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js' },
       // fontawesome
       // { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/brands.min.js' },
       // { src: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/solid.min.js' },
@@ -90,11 +91,12 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     proxy: true,
-    baseURL: 'http://localhost:3000'
+    baseURL: 'http://127.0.0.1:3000'
   },
 
   proxy: {
-    '/blog/': 'http://localhost:3000/'
+    '/blog/': 'http://127.0.0.1:3000/',
+    '/user/': 'http://127.0.0.1:3000/'
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content

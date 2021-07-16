@@ -32,6 +32,12 @@ export default {
       }
     });
 
+    // 设置登录 cookie
+    // Cookies.set('login', 0, {
+    //   expires: 365,
+    //   path: '/'
+    // });
+
   },
 
   methods: {
